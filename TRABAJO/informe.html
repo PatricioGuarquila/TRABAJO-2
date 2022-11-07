@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO</title>
+    <script src="javascript.js"></script>
+    
+</head>
+
+<body>
+    <form action="#" method="post">
+
+        //ejercicio 1
+
+        <fieldset>
+            <h1>De grados Celsius a  grados Fahrenheit</h1>
+            <label for="gradoCelsius">GradoCelsius:</label>
+            <input type="text" id="celsius" name="Celcius"  value="0" >
+            
+            <span id="res"></span>
+            <h3 id="fah"></h3>
+            <input  type="button" name="btnCalcular" value="Calcular Porcentajes" onclick="convertirGradosCentigradosAGradosFahrenheint()">
+        </fieldset>
+
+        //ejercicio 2
+
+        <fieldset>
+            <h1>Calcular porcentaje</h1>
+            <label for="numero">Ingrese el numero para obtener su porcentaje</label>
+
+            <input type="text" name="Cantidad" id="numero" id="porcent50" id="porcent7" >
+
+            <span id="resultado"></span>
+         
+            <input  type="button" name="Respuesta" value="calcular" id="porcent50" id="porcent7" 
+
+            onclick=" calcularPorcentajes()">
+        
+        </fieldset>
+
+        //ejercicio 3
+
+       <fieldset>
+        
+        <h1>Generar tabla</h1>
+        <input type="button" onclick="crearTabla()" value="Crear tabla">
+        <table id="tblDatos" border="1"></table>
+        <script>
+            function crearTabla() {
+    
+                let filas = parseInt(prompt('Digite el número de filas para la tabla:'));
+                let columnas = parseInt(prompt('Digite el número de columnas para la tabla:'));
+                
+                for (let i = 0; i < filas; i++) {
+                    let filaActual = document.getElementById('tblDatos').insertRow(i);
+                    
+                    for (let j = 0; j < columnas; j++) {
+                        let celda = filaActual.insertCell(j);
+    
+                        celda.innerHTML = `Fila: ${i} - Columna: ${j}`;
+                        
+                    }
+                }
+            }
+        </script>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
